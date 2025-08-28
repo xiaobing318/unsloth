@@ -16,9 +16,29 @@
 
 </div>
 
+```c
+/*
+Notes:
+1、unsloth 这个库是专门用来 finetune larger langugae models 的。
+2、unsloth 这个库目前可以 finetune 的 larger langugae models 下列：
+  2.1 gpt-oss
+  2.2 Gemma 3n
+  2.3 Qwen 3
+  2.4 Llama 4
+  2.5 Mistral
+3、unsloth 这个库的优点是用少于80%的 VRAM 达到2x的finetune效率。 
+*/
+```
+
 ## ✨ Finetune for Free
 
 Notebooks are beginner friendly. Read our [guide](https://docs.unsloth.ai/get-started/fine-tuning-guide). Add your dataset, click "Run All", and export your finetuned model to GGUF, Ollama, vLLM or Hugging Face.
+```c
+/*
+Notes:
+1、对于新手来说 Notebooks 是非常友好的。阅读 finetune 指南可以很容易入手。首先添加你自己的数据集，然后点击 Run All ，最后你可以将你微调过的模型导出成/到 GGUF、Ollama、vLLM 或者 Hugging Face 上面。
+*/
+```
 
 | Unsloth supports | Free Notebooks | Performance | Memory use |
 |-----------|---------|--------|----------|
@@ -36,7 +56,14 @@ Notebooks are beginner friendly. Read our [guide](https://docs.unsloth.ai/get-st
 - See all our notebooks for: [Kaggle](https://github.com/unslothai/notebooks?tab=readme-ov-file#-kaggle-notebooks), [GRPO](https://docs.unsloth.ai/get-started/unsloth-notebooks#grpo-reasoning-rl-notebooks), **[TTS](https://docs.unsloth.ai/get-started/unsloth-notebooks#text-to-speech-tts-notebooks)** & [Vision](https://docs.unsloth.ai/get-started/unsloth-notebooks#vision-multimodal-notebooks)
 - See [all our models](https://docs.unsloth.ai/get-started/all-our-models) and [all our notebooks](https://github.com/unslothai/notebooks)
 - See detailed documentation for Unsloth [here](https://docs.unsloth.ai/)
-
+```c
+/*
+Notes:
+1、查看我们针对 Kaggle/GRPO/TTS/Vision 的全部 notebooks。
+2、查看我们所有的模型和所有的 notebooks。
+3、如果想要对 Unsloth 有着更多的了解，那么可以查看更加详细的文档。
+*/
+```
 ## ⚡ Quickstart
 
 - **Install with pip (recommended)** for Linux devices:
@@ -44,6 +71,16 @@ Notebooks are beginner friendly. Read our [guide](https://docs.unsloth.ai/get-st
 pip install unsloth
 ```
 For Windows install instructions, see [here](https://docs.unsloth.ai/get-started/installing-+-updating/windows-installation).
+```c
+/*
+Notes:
+1、Linux devices
+  1.1 直接使用 pip 安装这个第三方库。
+  1.2 如果想要更加容易的使用该库进行 finetune ，那么使用 Linux devices 则是更为方便的。
+2、Windows devices
+  2.1 相对 Linux devices 来说 Windows devices 使用该库进行 finetune 是比较繁琐一些的，以目前现有的资源应该参考该资源对 finetune 环境进行配置。
+*/
+```
 
 ## 🦥 Unsloth.ai News
 - 📣 **gpt-oss** by OpenAI: For details on our bug fixes, [Read our Guide](https://docs.unsloth.ai/basics/gpt-oss). 20B works on a 14GB GPU and 120B on 65GB VRAM. [gpt-oss uploads](https://huggingface.co/collections/unsloth/gpt-oss-6892433695ce0dee42f31681).
@@ -86,9 +123,28 @@ For Windows install instructions, see [here](https://docs.unsloth.ai/get-started
 - No change of hardware. Supports NVIDIA GPUs since 2018+. Minimum CUDA Capability 7.0 (V100, T4, Titan V, RTX 20, 30, 40x, A100, H100, L40 etc) [Check your GPU!](https://developer.nvidia.com/cuda-gpus) GTX 1070, 1080 works, but is slow.
 - Works on **Linux** and **Windows**
 - If you trained a model with 🦥Unsloth, you can use this cool sticker! &nbsp; <img src="https://raw.githubusercontent.com/unslothai/unsloth/main/images/made with unsloth.png" width="200" align="center" />
+```c
+/*
+Notes:
+1、支持全量微调、预训练、4-bit、16-bit、8-bit训练。
+2、支持所有的 transformer-style 的模型，包括 TTS、STT、multimodal、diffusion、BERT 等等。
+3、所有的 kernels 都是使用 OpenAI 的Triton language 进行编写的，并且手动优化了 backprop engine。
+4、在精度方面没有损耗，没有采用估算的方法全都是使用精确的方式。
+5、硬件无需更换。支持 2018 年及以后的 NVIDIA GPU。最低 CUDA 能力 7.0（V100、T4、Titan V、RTX 20、30、40x、A100、H100、L40 等）请检查您的 GPU！GTX 1070、1080 可以运行，但速度较慢。
+6、支持 Linux 和 Windows 。
+7、如果你使用 Unsloth 训练了一个模型，那么你可以使用这个比较酷的标签。
+*/
+```
 
 ## 💾 Install Unsloth
 You can also see our documentation for more detailed installation and updating instructions [here](https://docs.unsloth.ai/get-started/installing-+-updating).
+```c
+/*
+Notes:
+1、这部分内容介绍的是如何安装这个用来对模型进行 finetune 的第三方库。
+2、你还可以查看我们的文档以获取更详细的安装和更新说明。
+*/
+```
 
 ### Pip Installation
 **Install with pip (recommended) for Linux devices:**
@@ -103,7 +159,12 @@ See [here](https://github.com/unslothai/unsloth/edit/main/README.md#advanced-pip
 ### Windows Installation
 > [!warning]
 > Python 3.13 does not support Unsloth. Use 3.12, 3.11 or 3.10
-
+```c
+/*
+Notes:
+1、这里需要注意的一个事情是最新的 python 3.13 是不支持 Unsloth 的，如果想要使用 Unsloth ，那么需要使用 python 3.12 或者 python 3.11 或者 python 3.10 。
+*/
+```
 1. **Install NVIDIA Video Driver:**
   You should install the latest version of your GPUs driver. Download drivers here: [NVIDIA GPU Drive](https://www.nvidia.com/Download/index.aspx).
 
@@ -132,6 +193,14 @@ SFTConfig(
     dataset_num_proc=1,
     ...
 )
+```
+```c
+/*
+Notes:
+1、为了可以直接在 Windows 上运行 Unsloth 这个第三方库，你需要做下列两个步骤：
+  1.1 从此 Windows fork 安装 Triton 并按照此处的说明进行操作（请注意，Windows fork 需要 PyTorch >= 2.4 和 CUDA 12）。
+  1.2 在 SFTConfig 中，设置 dataset_num_proc=1 以避免崩溃问题。
+*/
 ```
 
 #### Advanced/Troubleshooting
@@ -326,6 +395,13 @@ RL including DPO, GRPO, PPO, Reward Modelling, Online DPO all work with Unsloth.
 - DPO Zephyr notebook: [Link](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Zephyr_(7B)-DPO.ipynb)
 - KTO notebook: [Link](https://colab.research.google.com/drive/1MRgGtLWuZX4ypSfGguFgC-IblTvO2ivM?usp=sharing)
 - SimPO notebook: [Link](https://colab.research.google.com/drive/1Hs5oQDovOay4mFA6Y9lQhVJ8TnbFLFh2?usp=sharing)
+```c
+/*
+Notes:
+1、强化学习（RL），包括 DPO、GRPO、PPO、Reward Modelling 和 Online DPO，均可与 Unsloth 配合使用。我们在🤗Hugging Face 的官方文档中！我们在 GRPO 文档和 DPO 文档中！
+2、上述罗列了一些强化学习笔记本列表。
+*/
+```
 
 <details>
   <summary>Click for DPO code</summary>
